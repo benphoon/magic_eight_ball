@@ -5,9 +5,9 @@ let drink = ["Red Wine", "Beer", "Champagne", "Cordial", "Water", "Soda", "Lemon
 let location = ["the cinema", "the skatepark", "the park", "outside the shopping centre", "the fanciest restaurant in town", "the beach", "the riverside", "a friend's house"]
 
 // These select the random elements from the arrays
-let random_food = Math.floor(Math.random() * food.length)
-let random_drink = Math.floor(Math.random() * drink.length)
-let random_location = Math.floor(Math.random() * location.length)
+let random_food = food[Math.floor(Math.random() * (food.length - 1))]
+let random_drink = drink[Math.floor(Math.random() * (drink.length - 1))]
+let random_location = location[Math.floor(Math.random() * (location.length - 1))]
 
 // This function combines random elements into one message
 const generator = (random_food, random_drink, random_location) => {
